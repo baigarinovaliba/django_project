@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hala Madrid</title>
+
+
+    <link rel="stylesheet"  href="{% static 'style.css' %}">
+
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+<style>
+    body {
+        padding: 30px;
+    }
+</style>
+
+
+
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="#" class="navbar-brand">SuperLogo</a>
+            </div>
+            <div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Главная</a> </li>
+                    <li><a href="#">О нас</a> </li>
+                    <li><a href="#">Карта сайта</a> </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <h1 class="title">  Hala Madrid {{ name }} !</h1>
+        <div class="row">
+                <div class="col-md-4" style="background-color:#FF9900">Left</div>
+                <div class="col-md-4" style="background-color:#00FF66">Middle</div>
+                <div class="col-md-4" style="background-color:#6600FF">Right </div>
+
+        </div>
+        <br><br>
+
+        <form action="" method="post">{% csrf_token %}
+            {{ form.as_p }}
+            <div>
+                <button type="submit" class="btn btn-primary">Отправить</button>
+            </div>
+        </form>
+    </div>
+
+
+
+</body>
+</html>
